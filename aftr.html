@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Augmented Reality @ATACSPO</title>
+    <title>Audio Feedback Training Round</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
@@ -24,48 +24,6 @@
     </style>
 
     <model-viewer id= "aftr-demo" src="../../assets/SPO_Logo.glb" ios-src="../../assets/SPO_Logo.usdz" alt="Audible Feedback Training Round" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" shadow-intensity="1" camera-controls>
-    <div id="controls">
-        <button onclick="myFunction()">Toggle View</button>
-    </div>
-    </model-viewer>
-
-    <script>
-        const models = ['JL_Logo' , 'SPO_Logo']
-        const modelViewer = document.querySelector('#aftr-demo');
-        let j = 0;
-        function myFunction() {
-            modelViewer.setAttribute('src' , `../../assets/${models[j++ % 2]}.glb`);
-            modelViewer.setAttribute('ios-src' , `../../assets/${models[j]}.usdz`);
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Augmented Reality @ATACSPO</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-</head>
-<body>
-    <style>
-        model-viewer{
-            width: auto;
-            height: 600px;
-            margin: 0 auto;
-        }
-        #controls {
-            position: absolute;
-            bottom: 16px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%)
-        }
-    </style>
-
-    <model-viewer id= "aftr-demo" src="../../assets/SPO_Logo.glb" ios-src="../../assets/SPO_Logo.usdz" alt="Audible Feedback Training Round" ar ar-placement="wall" ar-modes="webxr scene-viewer quick-look" environment-image="neutral" shadow-intensity="1" camera-controls>
     <div id="controls">
         <button onclick="myFunction()">Toggle View</button>
     </div>
