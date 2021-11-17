@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augmented Reality @ATACSPO</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        model-viewer{
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        #controls {
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          max-width: unset;
+          transform: unset;
+        }
+      
+        .dot{
+          display: block;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+          background: #fff;
+          --min-hotspot-opacity: 0;
+        }
+      
+        .dim{
+          background: #fff;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+          color: rgba(0, 0, 0, 0.8);
+          display: block;
+          font-family: Futura, Helvetica Neue, sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          max-width: 128px;
+          overflow-wrap: break-word;
+          padding: 0.5em 1em;
+          position: absolute;
+          width: max-content;
+          height: max-content;
+          transform: translate3d(-50%, -50%, 0);
+          --min-hotspot-opacity: 0;
+        }
+      
+    </style>
+    <model-viewer id= "aftr-demo" src="../../assets/SPO_Logo.glb" ios-src="../../assets/SPO_Logo.usdz" alt="Audible Feedback Training Round" ar ar-placement="wall" ar-modes="webxr scene-viewer quick-look" environment-image="neutral" shadow-intensity="1" camera-controls>
+    <div id="controls" class="dim">
+        <label for="src">Product:</label>
+        <select id="src">
+          <option src_value="../../assets/SPO_Logo.glb">SPO</option>
+          <option src_value="../../assets/JL_Logo.glb">Jericho</option>
+        </select>
+    </div>
+    </model-viewer>
+    <script>
+        const modelViewer = document.querySelector('#aftr-demo');
+        modelViewer.querySelector('#src').addEventListener('input', (event) => {
+            modelViewer.src = event.target.src_value;
+        });
+    </script>
+</body>
+</html>
