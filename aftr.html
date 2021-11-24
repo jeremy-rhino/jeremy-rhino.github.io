@@ -23,18 +23,18 @@
         }
     </style>
 
-    <model-viewer id= "aftr-demo" src="../../assets/SPO_Logo.glb" ios-src="../../assets/SPO_Logo.usdz" alt="Audible Feedback Training Round" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" shadow-intensity="1" camera-controls>
+    <model-viewer id= "aftr-demo" src="../../assets/AFTR_AR1.glb" ios-src="../../assets/AFTR_AR1.usdz" alt="Audible Feedback Training Round" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" shadow-intensity="1" camera-controls>
     <div id="controls">
         <button onclick="myFunction()">Toggle View</button>
     </div>
     </model-viewer>
 
     <script>
-        const models = ['JL_Logo' , 'SPO_Logo']
+        const models = ['AFTR_AR2' , 'AFTR_AR3' , 'AFTR_AR4' , 'AFTR_AR5' , 'AFTR_AR1']
         const modelViewer = document.querySelector('#aftr-demo');
         let j = 0;
         function myFunction() {
-            modelViewer.setAttribute('src' , `../../assets/${models[j++ % 2]}.glb`);
+            modelViewer.setAttribute('src' , `../../assets/${models[j++ % 5]}.glb`);
             modelViewer.setAttribute('ios-src' , `../../assets/${models[j]}.usdz`);
         }
     </script>
