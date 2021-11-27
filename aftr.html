@@ -23,14 +23,14 @@
         }
     </style>
 
-    <model-viewer id= "aftr-demo" src="../../assets/AFTR_AR1.glb" ios-src="../../assets/AFTR_AR1.usdz" alt="Audible Feedback Training Round" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" shadow-intensity="1" camera-controls>
+    <model-viewer id= "aftr-demo" src="../../assets/AFTR_AR5.glb" ios-src="../../assets/AFTR_AR5.usdz" alt="Audible Feedback Training Round" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" shadow-intensity="1" camera-controls>
     <div id="controls">
         <button onclick="myFunction()">Toggle View</button>
     </div>
     </model-viewer>
 
     <script>
-        const models = ['AFTR_AR2' , 'AFTR_AR3' , 'AFTR_AR4' , 'AFTR_AR5' , 'AFTR_AR1']
+        const models = ['AFTR_AR1' , 'AFTR_AR2' , 'AFTR_AR3' , 'AFTR_AR4' , 'AFTR_AR5']
         const modelViewer = document.querySelector('#aftr-demo');
         let j = 0;
         function myFunction() {
